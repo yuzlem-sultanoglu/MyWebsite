@@ -1,0 +1,261 @@
+@charset "UTF-8";
+
+@import url(https://fonts.bunny.net/css?family=ubuntu:300);
+
+body {
+	font-family: 'Ubuntu', sans-serif;
+}
+
+h1 {
+	background-color: rgb(39, 124, 120);
+	grid-area: header;
+	font-size: 1.5em;
+	color: rgb(255, 255, 255);
+	text-align: center;
+	padding: 10px 10px 10px 10px;
+}
+
+p {
+	background-color: rgb(255, 255, 255);
+	grid-area: header;
+	font-size: 1em;
+	color: rgb(39, 124, 120);
+	text-align: center;
+	padding: 10px 10px 10px 10px;
+}
+
+nav {
+	background-color: #189585;
+	padding: 10px 0;
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.menu {
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	gap: 30px;
+	margin: 0;
+	padding: 0;
+}
+
+.menu button {
+	padding: 10px 20px;
+	font-size: 1em;
+	border: none;
+	border-radius: 8px;
+	background-color: #127266;
+	color: white;
+	cursor: pointer;
+	transition: background-color 0.3s, transform 0.2s;
+}
+
+.menu button:hover {
+	background-color: #0e5a52;
+	transform: scale(1.05);
+}
+
+section {
+	padding: 20px;
+	margin: 20px;
+	border-radius: 8px;
+	background-color: #f0f0f0;
+}
+
+.hidden {
+	display: none;
+}
+
+.menu li a {
+	text-decoration: none;
+	color: white;
+	font-size: 1.1em;
+	font-weight: bold;
+	padding: 10px 20px;
+	background-color: #127266;
+	border-radius: 10px;
+	transition: background-color 0.3s, transform 0.2s;
+}
+
+.menu li a:hover {
+	background-color: #0e5a52;
+	transform: scale(1.05);
+}
+
+h2 {
+	background-color: #03a08d;
+	grid-area: header;
+	font-size: 1.5em;
+	color: rgb(255, 255, 255);
+	text-align: center;
+	padding: 10px 10px 10px 10px;
+}
+section#waardigheden table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+section#waardigheden table td {
+  padding: 15px 20px;
+  border-bottom: 1px solid #ddd;
+  vertical-align: top;
+}
+
+section#waardigheden table tr:last-child td {
+  border-bottom: none;
+}
+
+section#waardigheden table td:first-child {
+  font-weight: bold;
+  color: #127266;
+  width: 30%;
+  background-color: #f4fafa;
+}
+section#waardigheden {
+  overflow-x: auto;
+}
+
+#projecten table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.95rem;
+  background-color: #fefefe;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#projecten thead {
+  background-color: #03a08d; /* Indigo-600 */
+  color: #fff;
+}
+
+#projecten th,
+#projecten td {
+  padding: 1rem;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid #e2e8f0; /* Light gray */
+}
+
+#projecten th {
+  font-weight: 600;
+}
+
+#projecten tbody tr:hover {
+  background-color: #f1f5f9; /* Hover: light slate */
+  transition: background-color 0.3s ease;
+}
+
+#projecten a {
+  color: #4f46e5;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+#projecten a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #projecten table, #projecten thead, #projecten tbody, #projecten th, #projecten td, #projecten tr {
+    display: block;
+    width: 100%;
+  }
+
+  #projecten tr {
+    margin-bottom: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0.5rem;
+    background-color: #fff;
+  }
+
+  #projecten td {
+    padding: 0.5rem 0.75rem;
+    border-bottom: none;
+  }
+
+  #projecten th {
+    display: none;
+  }
+
+  #projecten td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.3rem;
+    color: #475569; /* Slate-700 */
+  }
+}
+@media (max-width: 768px) {
+  table thead {
+    display: none;
+  }
+
+  table, tbody, tr, td {
+    display: block;
+    width: 100%;
+  }
+
+  td {
+    position: relative;
+    padding-left: 50%;
+    text-align: left;
+    border: none;
+    border-bottom: 1px solid #ccc;
+  }
+
+  td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 1rem;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+}
+#contact {
+  background-color: #f0f8f8;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  margin: 20px auto;
+  font-family: 'Ubuntu', sans-serif;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(24, 149, 133, 0.2);
+}
+
+#contact h2 {
+  color: #127266;
+  margin-bottom: 15px;
+}
+
+#contact a {
+  display: inline-block;
+  background-color: #189585;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#contact a:hover {
+  background-color: #127266;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
